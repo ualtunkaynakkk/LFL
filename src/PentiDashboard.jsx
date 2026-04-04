@@ -582,7 +582,6 @@ export default function PentiDashboard() {
           </div>
           <div>
             <div style={{ color:P.white, fontWeight:700, fontSize:15 }}>LFL Performans Paneli</div>
-            <div style={{ color:'rgba(255,255,255,0.75)', fontSize:11 }}>Bölgesel Satış Analizi · Canlı Görünüm</div>
           </div>
         </div>
         <div style={{ color:'rgba(255,255,255,0.8)', fontSize:12 }}>
@@ -670,7 +669,7 @@ export default function PentiDashboard() {
             display:'flex', alignItems:'center', justifyContent:'space-between', flexWrap:'wrap', gap:12 }}>
             <div style={{ display:'flex', alignItems:'center', gap:10 }}>
               <h3 style={{ margin:0, fontSize:15, fontWeight:700 }}>
-                {level==='OM' && 'Bölge Müdürleri (OM)'}
+                {level==='OM' && 'Operasyon Müdürleri'}
                 {level==='BM' && `${selectedOM} › Mağaza Müdürleri (BM)`}
                 {level==='STORE' && `${selectedBM} › Mağazalar`}
               </h3>
@@ -695,7 +694,7 @@ export default function PentiDashboard() {
               <thead>
                 <tr style={{ background:P.pinkLight }}>
                   <th style={{ padding:'12px 20px', textAlign:'left', fontWeight:700, fontSize:11, color:P.pinkDark, textTransform:'uppercase', letterSpacing:.5 }}>
-                    {level==='OM'?'Bölge Müdürü':level==='BM'?'Mağaza Müdürü':'Mağaza Adı'}
+                    {level==='OM'?'Operasyon Müdürü':level==='BM'?'Mağaza Müdürü':'Mağaza Adı'}
                   </th>
                   {METRICS.map(m=>(
                     <th key={m} onClick={()=>requestSort(m)}
